@@ -1,4 +1,4 @@
-FROM gcr.io/tensorflow/tensorflow:latest
+FROM tensorflow/tensorflow:r0.9
 MAINTAINER Alain Chomnoue <chomnoue@yahoo.fr>
 RUN apt-get update && apt-get install -y libhdf5-dev
 RUN pip install --upgrade pip
