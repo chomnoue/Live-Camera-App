@@ -1,3 +1,5 @@
 train*
 test*
+extra*
+checkpoint*
 .ipynb_checkpoints
