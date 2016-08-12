@@ -1,3 +1,6 @@
 train*
 test*
+extra*
+checkpoint*
+predict_digits.ckpt*
 .ipynb_checkpoints
