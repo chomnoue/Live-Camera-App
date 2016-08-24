@@ -5,4 +5,3 @@ checkpoint*
 .ipynb_checkpoints
 predict_digits.ckpt*
 *.png
-draw_convnet.py
