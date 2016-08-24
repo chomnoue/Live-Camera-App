@@ -137,13 +137,14 @@ if __name__ == '__main__':
     patch_size_list = [5, 2, 5, 2, 5, 2]
     ind_bgn_list = range(len(patch_size_list))
     text_list = ['Convolution', 'Max-pooling', 'Convolution', 'Max-pooling', 'Convolution', 'Max-pooling']
+    relu_list = ['\n+RELU', '', '\n+RELU', '', '\n+RELU', '']
 
     for ind in range(len(patch_size_list)):
         add_mapping(patches, colors, start_ratio_list[ind],
                     patch_size_list[ind], ind,
                     top_left_list, loc_diff_list, num_show_list, size_list)
         label(top_left_list[ind], text_list[ind] + '\n{}x{} kernel'.format(
-            patch_size_list[ind], patch_size_list[ind]), xy_off=[26, -65])
+            patch_size_list[ind], patch_size_list[ind])+relu_list[ind], xy_off=[26, -65])
 
 
     ############################
@@ -162,7 +163,7 @@ if __name__ == '__main__':
         label(top_left_list[ind], text_list[ind] + '\n{}'.format(
             num_list[ind]))
 
-    text_list = ['Flatten\n', 'Fully\nconnected', 'One Fully\nconnected\nper digit']
+    text_list = ['Flatten\n', 'Fully\nconnected\n+RELU\n+dropout', 'One Fully\nconnected\nper digit']
 
     for ind in range(len(size_list)):
         label(top_left_list[ind], text_list[ind], xy_off=[-10, -65])
